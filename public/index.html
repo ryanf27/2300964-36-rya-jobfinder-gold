@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Finder API Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/4ead19ef99.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- <a href="#" class="mainWebsite">Back to main websitet</a> -->
+    <div class="container">
+      <!-- sidebar -->
+      <div class="navigation">
+        <ul>
+          <li><a href="#about" onclick="toggleMenu();">About</a></li>
+          <li>
+            <a href="#documentation" onclick="toggleMenu();">Documentation</a>
+            <ul class="sub-list">
+              <li><a href="#model">Model</a></li>
+              <li><a href="#controller">Controller</a></li>
+              <li><a href="#router">Router</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- main section -->
+      <div class="main">
+        <div class="topbar">
+          <a href="" class="logo">API Documentation</a>
+          <div class="toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+
+        <!-- About -->
+        <section class="about adjust" id="about">
+          <div class="title">
+            <h2>About</h2>
+          </div>
+          <div class="content">
+            <div class="textBox">
+              <p>
+                Welcome to the Job Finder API Documentation, a platform designed
+                specifically to assist you in your job search more efficiently.
+                We believe that searching for a job should not be complicated,
+                and this API comes with cutting-edge technology to ensure a
+                smoother job search experience:
+              </p>
+            </div>
+
+            <div class="about-list">
+              <ul>
+                <li>
+                  <strong>Express.js:</strong> Our foundational framework.
+                  Express.js, a minimalistic and flexible framework for Node.js,
+                  provides the ability to handle routes, middleware, and HTTP
+                  requests efficiently. This ensures a seamless interaction with
+                  our API.
+                </li>
+                <li>
+                  <strong>PostgreSQL:</strong> Our preferred database. We use
+                  PostgreSQL to securely store and manage job-related data. With
+                  PostgreSQL, you can rely on the reliability and scalability we
+                  need to run this platform.
+                </li>
+                <li>
+                  <strong>Knex.js:</strong> A trusted query builder tool.
+                  Knex.js helps us create structured and secure database
+                  queries, simplifying database operations and ensuring
+                  efficient code maintenance.
+                </li>
+                <li>
+                  <strong>pg (node-postgres):</strong> Direct connector to
+                  PostgreSQL. The PostgreSQL driver for Node.js enables seamless
+                  communication between our API and the PostgreSQL database.
+                </li>
+                <li>
+                  <strong>Nodemon:</strong> In addition to the mentioned
+                  technologies, we also utilize a highly useful tool called
+                  Nodemon. Nodemon is a development tool that monitors changes
+                  in your code and automatically restarts the server when
+                  changes occur. This allows you to focus on development without
+                  manually restarting the server every time you make changes.
+                </li>
+              </ul>
+            </div>
+            <div class="textBox">
+              <p>
+                This documentation is your comprehensive guide to using the Job
+                Finder API. We have detailed information about available routes,
+                request parameters, and responses to facilitate integration and
+                development. We are committed to making your job search
+                experience better.
+              </p>
+              <p>
+                Happy coding, and may your job search be successful. We are
+                ready to support your journey to your dream career.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Documentation -->
+        <section class="documentation adjust" id="documentation">
+          <div class="title">
+            <h2>Documentation</h2>
+          </div>
+          <div class="content">
+            <!-- Folder Structure -->
+            <div class="content-box">
+              <h2>Folder Structure</h2>
+              <p>Below is the folder structure of Job Finder:</p>
+              <img src="img/struktur folder.png" />
+            </div>
+            <div class="content-box" id="model">
+              <h2>Database Schema / Model</h2>
+              <p>Below is the Schema for the Table jobs of Job Finder:</p>
+              <img src="img/schema jobs table.png" />
+            </div>
+
+            <!-- Controllers Section -->
+            <div class="controller-list" id="controller">
+              <h2>Controllers</h2>
+              <ul>
+                <!-- Show Controller -->
+                <li>
+                  <div class="controller">
+                    <h3>Show</h3>
+                    <p>
+                      This controller is used to retrieve all job data from the
+                      database.
+                    </p>
+                    <img src="img/show.png" alt="Show Controller" />
+                    <ul>
+                      <li>HTTP Method: GET</li>
+                      <li>Route: /jobs</li>
+                      <li>Parameters: None</li>
+                      <li>Success Response:</li>
+                      <img src="img/get all data.png" />
+                    </ul>
+                  </div>
+                </li>
+                <!-- Find Controller -->
+                <li>
+                  <div class="controller">
+                    <h3>Find</h3>
+                    <p>
+                      This controller is used to retrieve specific job data by
+                      ID from the database.
+                    </p>
+                    <img src="img/find.png" />
+                    <ul>
+                      <li>HTTP Method: GET</li>
+                      <li>Route: /jobs/:id</li>
+                      <li>Parameters: id</li>
+                      <li>Success Response:</li>
+                      <img src="img/get by id.png" />
+                    </ul>
+                  </div>
+                </li>
+                <!-- Create Controller -->
+                <li>
+                  <div class="controller">
+                    <h3>Create</h3>
+                    <p>
+                      This controller is used to Create job data to the
+                      database.
+                    </p>
+                    <img src="img/create.png" />
+                    <ul>
+                      <li>HTTP Method: POST</li>
+                      <li>Route: /jobs</li>
+                      <li>Parameters: None</li>
+                      <li>Body: JSON data</li>
+                      <li>Success Response:</li>
+                      <img src="img/create data.png" />
+                    </ul>
+                  </div>
+                </li>
+                <!-- Update Controller -->
+                <li>
+                  <div class="controller">
+                    <h3>Update</h3>
+                    <p>
+                      This controller is used to Update job data from the
+                      database.
+                    </p>
+                    <img src="img/update.png" />
+                    <ul>
+                      <li>HTTP Method: PUT</li>
+                      <li>Route: /jobs/:id</li>
+                      <li>Parameters: id</li>
+                      <li>Body: JSON data</li>
+                      <li>Success Response:</li>
+                      <img src="img/create data.png" />
+                    </ul>
+                  </div>
+                </li>
+                <!-- Remove Controller -->
+                <li>
+                  <div class="controller">
+                    <h3>Remove</h3>
+                    <p>
+                      This controller is used to Delete job data in the
+                      database.
+                    </p>
+                    <img src="img/create.png" />
+                    <ul>
+                      <li>HTTP Method: DELETE</li>
+                      <li>Route: /jobs/:id</li>
+                      <li>Parameters: id</li>
+                      <li>Body: none</li>
+                      <li>Success Response:</li>
+                      <img src="img/create data.png" />
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-box" id="router">
+              <h2>Routes</h2>
+              <p>Below is the routes for API jobs of Job Finder:</p>
+              <img src="img/router.png" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <secttion class="contact adjust" id="contact">
+          <div class="title">
+            <h2>Explore Further</h2>
+            <p>
+              Discover more about our services and how they can benefit you.
+            </p>
+          </div>
+          <div class="contactForm">
+            <div class="row">
+              <input type="text" name="" placeholder="First Name" />
+              <input type="text" name="" placeholder="Last Name" />
+            </div>
+            <div class="row">
+              <input type="text" name="" placeholder="Email Address" />
+              <input type="text" name="" placeholder="Mobile No." />
+            </div>
+            <button>Subscribe</button>
+          </div>
+
+          <div class="social-logo">
+            <ul>
+              <li>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </secttion>
+
+        <!-- Copyright Text -->
+        <div class="copyright">
+          <p>copyright 2023 All Right Reserved</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let toggle = document.querySelector(".toggle");
+      let topbar = document.querySelector(".topbar");
+      let navigation = document.querySelector(".navigation");
+      let main = document.querySelector(".main");
+      toggle.onclick = function () {
+        toggle.classList.toggle("active");
+        topbar.classList.toggle("active");
+        navigation.classList.toggle("active");
+        main.classList.toggle("active");
+      };
+
+      // menu active class issue for mobile device
+      function toggleMenu() {
+        let navigation = document.querySelector(".navigation");
+        let main = document.querySelector(".main");
+        navigation.classList.remove("active");
+        main.classList.remove("active");
+      }
+    </script>
+  </body>
+</html>
