@@ -19,16 +19,16 @@
       <!-- sidebar -->
       <div class="navigation">
         <ul>
-          <li><a href="#about" onclick="toggleMenu();">About</a></li>
+          <li><a href="#about">About</a></li>
           <li>
-            <a href="#documentation" onclick="toggleMenu();">Documentation</a>
+            <a href="#documentation">Documentation</a>
             <ul class="sub-list">
               <li><a href="#model">Model</a></li>
               <li><a href="#controller">Controller</a></li>
               <li><a href="#router">Router</a></li>
             </ul>
           </li>
-          <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
@@ -284,26 +284,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      let toggle = document.querySelector(".toggle");
-      let topbar = document.querySelector(".topbar");
-      let navigation = document.querySelector(".navigation");
-      let main = document.querySelector(".main");
-      toggle.onclick = function () {
-        toggle.classList.toggle("active");
-        topbar.classList.toggle("active");
-        navigation.classList.toggle("active");
-        main.classList.toggle("active");
-      };
-
-      // menu active class issue for mobile device
-      function toggleMenu() {
-        let navigation = document.querySelector(".navigation");
-        let main = document.querySelector(".main");
-        navigation.classList.remove("active");
-        main.classList.remove("active");
-      }
-    </script>
   </body>
 </html>
